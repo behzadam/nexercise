@@ -13,7 +13,7 @@ export default async function Page() {
     <div className="grid place-content-center min-h-screen">
       <p className="text-center text-lg">dynamic: force-dynamic</p>
       <p className="text-center text-sm mb-4 text-neutral-500">
-        Opt out of caching for all data requests in the route segment. 
+        No caching for all data requests in the route segment.
         <a
           className="text-blue-500"
           href="https://nextjs.org/docs/app/building-your-application/caching#opting-out-1"
