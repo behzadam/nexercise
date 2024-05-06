@@ -1,17 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
-export default async function Page() {
+export const dynamic = "force-dynamic";
+
+export default async function Page1() {
   const randomImage = await fetch("https://picsum.photos/300/300?grayscale", {
     cache: "no-store",
+    next: { revalidate: 0 },
   }).then((res) => {
     return res.url;
   });
 
   return (
-    <div className="grid place-content-center min-h-screen">
-      <p className="text-center text-lg">cache: no-store</p>
-      <p className="text-center text-sm mb-4 text-neutral-500">
-        In HTTP protocol no-store means no cache.
-      </p>
+    <div className="grid place-content-center">
+      <p className="text-center text-lg mb-4">cache: no!</p>
       <img
         src={randomImage}
         alt="Random Image"
